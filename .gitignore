@@ -1,0 +1,8 @@
+WombatGH/obj/
+*.suo
+WombatGH/bin/
+!WombatGH/references/*
+WombatGH/.vs/
+WombatGH/packages/
+.vs/
+*.user

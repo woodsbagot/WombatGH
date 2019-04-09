@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="WombatGH_AdjustAlpha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_AdjustAlpha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_ArrangeInGrid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_ArrangeInGrid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_BoundaryMesh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_BoundaryMesh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_BRepCPAdv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_BRepCPAdv.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_ConPathMsk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_ConPathMsk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_CrvCrvCP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_CrvCrvCP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_CrvDirDisplay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_CrvDirDisplay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_CullEnds" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_CullEnds.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_DivByTarget" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_DivByTarget.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_DivDom3D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_DivDom3D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_ElementIDFromFBX" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_ElementIDFromFBX.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_ExtrudeAsMesh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_ExtrudeAsMesh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_IdentityPreview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_IdentityPreview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_JoinCrvWTol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_JoinCrvWTol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_LabelPaths" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_LabelPaths.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_ListIndices" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_ListIndices.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_Midpoint" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_Midpoint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_NormalDisplay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_NormalDisplay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_NullObj" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_NullObj.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_NullsEmptyBranch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_NullsEmptyBranch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_RandomColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_RandomColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_ReplaceTextMulti" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_ReplaceTextMulti.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_ShiftListBoth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_ShiftListBoth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_ShortenCrv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_ShortenCrv.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_UnitWarning" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_UnitWarning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_BackupData" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_BackupData.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_BRepFacesByDir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_BRepFacesByDir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_CanvasColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_CanvasColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_CenteredDomain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_CenteredDomain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_CenterOnOrigin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_CenterOnOrigin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_CopyMoveRenameFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_CopyMoveRenameFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_DecimalFtToFtIn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_DecimalFtToFtIn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_DirFromFilePath" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_DirFromFilePath.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_DocUnits" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_DocUnits.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_EmptyObjToEmptyBranch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_EmptyObjToEmptyBranch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_Export_File" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_Export File.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_FileExists" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_FileExists.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_FileNameFromFilePath" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_FileNameFromFilePath.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_FtInToDecimalFt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_FtInToDecimalFt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_InflateBox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_InflateBox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_NextAvailableFileName" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_NextAvailableFileName.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_ShrinkSrf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_ShrinkSrf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_SrfCtr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_SrfCtr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_SrfDir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_SrfDir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_SubBox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_SubBox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_TxtOutlines" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_TxtOutlines.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_UnrollBrep" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_UnrollBrep.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_UVDisplay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_UVDisplay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_WriteToTxtFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_WriteToTxtFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_ZoomBbox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_ZoomBbox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_WOMBAT_TAB_ICON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_WOMBAT TAB ICON.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_DispSettings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_DispSettings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_Familifier" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_Familifier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_LoftEx" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_LoftEx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_MultiExportFam" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_MultiExportFam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_ConvertCase" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_ConvertCase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_DataExists" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_DataExists.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_ExtendSrf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_ExtendSrf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_LaunchURL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_LaunchURL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_NaNObject" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_NaNObject.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_CloseCurve" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_CloseCurve.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WombatGH_FeatureRequest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WombatGH_FeatureRequest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

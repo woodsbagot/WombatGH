@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug64</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{276F930A-730E-4536-A0EE-94DE752FB4AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WombatGH</RootNamespace>
+    <AssemblyName>WombatGH</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug64|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Eto, Version=2.5.0.0, Culture=neutral, PublicKeyToken=552281e97c755530, processorArchitecture=MSIL">
+      <HintPath>packages\RhinoCommon.6.12.19029.6381\lib\net45\Eto.dll</HintPath>
+    </Reference>
+    <Reference Include="GH_IO, Version=6.12.19029.6380, Culture=neutral, PublicKeyToken=6a29997d2e6b4f97, processorArchitecture=MSIL">
+      <HintPath>packages\Grasshopper.6.12.19029.6381\lib\net45\GH_IO.dll</HintPath>
+    </Reference>
+    <Reference Include="Grasshopper, Version=6.12.19029.6380, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803, processorArchitecture=MSIL">
+      <HintPath>packages\Grasshopper.6.12.19029.6381\lib\net45\Grasshopper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.UI, Version=6.12.19029.6380, Culture=neutral, PublicKeyToken=552281e97c755530, processorArchitecture=MSIL">
+      <HintPath>packages\RhinoCommon.6.12.19029.6381\lib\net45\Rhino.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="RhinoCommon, Version=6.12.19029.6380, Culture=neutral, PublicKeyToken=552281e97c755530, processorArchitecture=MSIL">
+      <HintPath>packages\RhinoCommon.6.12.19029.6381\lib\net45\RhinoCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Surface">
+      <HintPath>references\Surface.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Transform">
+      <HintPath>references\Transform.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Vector">
+      <HintPath>references\Vector.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdjustAlpha.cs" />
+    <Compile Include="CloseCurve.cs" />
+    <Compile Include="ArrangeInGrid.cs" />
+    <Compile Include="AssemblyPriority.cs" />
+    <Compile Include="BackupData.cs" />
+    <Compile Include="BoundaryMesh.cs" />
+    <Compile Include="BrepCPAdvanced.cs" />
+    <Compile Include="BrepFacesByDirection.cs" />
+    <Compile Include="CenteredDomain.cs" />
+    <Compile Include="CenterOnOrigin.cs" />
+    <Compile Include="ConvertCase.cs" />
+    <Compile Include="DataExists.cs" />
+    <Compile Include="ExtendSurface.cs" />
+    <Compile Include="LaunchURL.cs" />
+    <Compile Include="FeatureRequest.cs" />
+    <Compile Include="NaNObject.cs" />
+    <Compile Include="CopyMoveRenameFile.cs" />
+    <Compile Include="CurveCurveCP.cs" />
+    <Compile Include="CurveDirectionDisplay.cs" />
+    <Compile Include="DivideByTarget.cs" />
+    <Compile Include="ElementIDFromFBXImport.cs" />
+    <Compile Include="ExportFile.cs" />
+    <Compile Include="ExtrudeMesh.cs" />
+    <Compile Include="FileExists.cs" />
+    <Compile Include="IdentityPreview.cs" />
+    <Compile Include="ConstructPathMask.cs" />
+    <Compile Include="CullEnds.cs" />
+    <Compile Include="DirectoryFromFilePath.cs" />
+    <Compile Include="DivideDomain3D.cs" />
+    <Compile Include="EmptyObjectToEmptyBranch.cs" />
+    <Compile Include="FileNameFromFilePath.cs" />
+    <Compile Include="FootInchToDecimalFoot.cs" />
+    <Compile Include="InflateBox.cs" />
+    <Compile Include="JoinCurvesWithTolerance.cs" />
+    <Compile Include="LabelPaths.cs" />
+    <Compile Include="ListIndices.cs" />
+    <Compile Include="LoftEx.cs" />
+    <Compile Include="Midpoint.cs" />
+    <Compile Include="NextAvailableFileName.cs" />
+    <Compile Include="NormalDisplay.cs" />
+    <Compile Include="NullObject.cs" />
+    <Compile Include="NullsInEmptyBranches.cs" />
+    <Compile Include="DisplaySettings.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RandomColor.cs" />
+    <Compile Include="ReplaceTextMulti.cs" />
+    <Compile Include="ShiftBothWays.cs" />
+    <Compile Include="ShrinkSurface.cs" />
+    <Compile Include="SubBox.cs" />
+    <Compile Include="CanvasColor.cs" />
+    <Compile Include="DecimalFootToFootInch.cs" />
+    <Compile Include="DocumentUnits.cs" />
+    <Compile Include="SurfaceCentroid.cs" />
+    <Compile Include="SurfaceDirection.cs" />
+    <Compile Include="TextOutlines.cs" />
+    <Compile Include="UnitWarning.cs" />
+    <Compile Include="UnrollBrep.cs" />
+    <Compile Include="UVDisplay.cs" />
+    <Compile Include="WriteToTextFile.cs" />
+    <Compile Include="ZoomBoundingBox.cs" />
+    <Compile Include="WombatGHInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\WombatGH_AdjustAlpha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_ArrangeInGrid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_BackupData.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_BoundaryMesh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_BRepCPAdv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_BRepFacesByDir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_CanvasColor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_CenteredDomain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_CenterOnOrigin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_CopyMoveRenameFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_CrvCrvCP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_CrvDirDisplay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_CullEnds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_DecimalFtToFtIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_DirFromFilePath.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_DivByTarget.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_DivDom3D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_DocUnits.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_ElementIDFromFBX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_EmptyObjToEmptyBranch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_Export File.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_ExtrudeAsMesh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_FileExists.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_FileNameFromFilePath.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_FtInToDecimalFt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_IdentityPreview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_InflateBox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_LabelPaths.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_ListIndices.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_Midpoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_NextAvailableFileName.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_NormalDisplay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_NullObj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_NullsEmptyBranch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_RandomColor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_ReplaceTextMulti.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_RunAllFromFlux.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_RunAllToFlux.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_ShiftListBoth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_ShrinkSrf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_SrfCtr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_SrfDir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_SubBox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_TxtOutlines.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_UnitWarning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_UnrollBrep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_UVDisplay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_WriteToTxtFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_ZoomBbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_WOMBAT TAB ICON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_ConPathMsk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_JoinCrvWTol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_ShortenCrv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_Familifier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_MultiExportFam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_LoftEx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_DispSettings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_ExtendSrf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_LaunchURL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_NaNObject.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_IsFluxUpdated.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_ConvertCase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_DataExists.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_FeatureRequest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_CloseCurve.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  -->
+  <Target Name="AfterBuild">
+    <ItemGroup>
+      <CefBinaries Include="$(SolutionDir)CEF\$(UnmanagedPlatform)\*.*" />
+      <LocaleFiles Include="$(SolutionDir)CEF\locales\*.*" />
+      <!-- <SubProcessFiles Include="$(SolutionDir)$(UnmanagedPlatform)\$(Configuration)\CefSharp.BrowserSubprocess.exe" /> -->
+    </ItemGroup>
+    <Copy SourceFiles="@(CefBinaries)" DestinationFolder="$(TargetDir)" />
+    <Copy SourceFiles="@(LocaleFiles)" DestinationFolder="$(TargetDir)locales" />
+    <!-- <Copy SourceFiles="@(SubProcessFiles)" DestinationFolder="$(TargetDir)" /> -->
+  </Target>
+  <PropertyGroup>
+    <PostBuildEvent>move $(TargetPath) $(TargetDir)\$(TargetName).gha</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <FallbackCulture>en-US</FallbackCulture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug64|x64'">
+    <StartProgram>C:\Program Files\Rhino 6\System\Rhino.exe</StartProgram>
+    <StartArguments>
+    </StartArguments>
+    <StartAction>Program</StartAction>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <Import Project="packages\RhinoCommon.6.12.19029.6381\build\net45\RhinoCommon.targets" Condition="Exists('packages\RhinoCommon.6.12.19029.6381\build\net45\RhinoCommon.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\RhinoCommon.6.12.19029.6381\build\net45\RhinoCommon.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\RhinoCommon.6.12.19029.6381\build\net45\RhinoCommon.targets'))" />
+    <Error Condition="!Exists('packages\Grasshopper.6.12.19029.6381\build\net45\Grasshopper.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Grasshopper.6.12.19029.6381\build\net45\Grasshopper.targets'))" />
+  </Target>
+  <Import Project="packages\Grasshopper.6.12.19029.6381\build\net45\Grasshopper.targets" Condition="Exists('packages\Grasshopper.6.12.19029.6381\build\net45\Grasshopper.targets')" />
+</Project>
