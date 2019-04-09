@@ -10,8 +10,8 @@ This project is built using [Visual Studio](https://visualstudio.microsoft.com/)
 3. Build the solution (right click on Solution 'WombatGH' -> Build Solution)
 4. The Grasshopper library (GHA) file is configured to build to `WombatGH/bin/<config>/WombatGH.gha`. You'll need to copy it to your Grasshopper components directory, or use GrasshopperDeveloperSettings command to tell Grasshopper to look in your /debug/ directory for the assembly.
 
-## Find a bug?
-Open an issue on the project's Github page. Please check previous issues to make sure you're not duplicating what's already there, and be as descriptive as possible! If you're up for it, you could even fix the bug yourself & become a contributor:
+## Find a bug? Want a new feature?
+[Open an issue](https://github.com/woodsbagot/WombatGH/issues/new/choose) on the project's Github page. Please check previous issues to make sure you're not duplicating what's already there, and be as descriptive as possible! If you're up for it, you could even fix the bug yourself & become a contributor:
 
 ## Contributing ##
 
