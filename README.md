@@ -33,3 +33,5 @@ These tools were initially built by [Andrew Heumann](https://github.com/AndrewHe
 
 A big thank you to all the Woods Bagot project staff whose requests and testing made these tools possible!
 	
+## License 
+[GPL v3.0](https://github.com/woodsbagot/WombatGH/blob/master/LICENSE)
