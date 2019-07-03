@@ -52,7 +52,6 @@ namespace WombatGH
             double y = 0;
 
             var geoToTransform = geoRaw.Where(g => g != null).ToList();
-            geoToTransform.Reverse();
 
             while (geoToTransform.Count > 0)
             {
@@ -60,8 +59,6 @@ namespace WombatGH
                 x = 0;
                 for (int i = 0; i < rowCount; i++) // for each item in the row 
                 {
-                    //if (geoToTransform.Count < i + 1) continue;
-                    //pop
                     if (geoToTransform.Count == 0) break;
                     var thisGeo = geoToTransform[0].DuplicateGeometry();
                     geoToTransform.RemoveAt(0);
@@ -76,15 +73,13 @@ namespace WombatGH
                     var transform = Transform.Translation(currPoint - lowerLeft);
 
                     thisGeo.Transform(transform);
-                    transformedGeo.Insert(0, thisGeo);
+                    transformedGeo.Add(thisGeo);
                     xforms.Add(transform);
                     x += width + spacing;
                     if (maxY < height) maxY = height; //for a given row, keep bumping the max row height
                 }
                 y += maxY + spacing;
             }
-            transformedGeo.Reverse();
-            xforms.Reverse();
 
             DA.SetDataList("Transformed Geometry", transformedGeo);
             DA.SetDataList("Transforms", xforms);
