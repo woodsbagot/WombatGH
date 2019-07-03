@@ -364,7 +364,8 @@
     <!-- <Copy SourceFiles="@(SubProcessFiles)" DestinationFolder="$(TargetDir)" /> -->
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>move $(TargetPath) $(TargetDir)\$(TargetName).gha</PostBuildEvent>
+    <PostBuildEvent>move $(TargetPath) $(TargetDir)\$(TargetName).gha
+copy "$(TargetDir)\$(TargetName).gha" "$(AppData)\Grasshopper\Libraries\"</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <FallbackCulture>en-US</FallbackCulture>
