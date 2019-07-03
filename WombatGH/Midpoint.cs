@@ -13,7 +13,7 @@ namespace WombatGH
     public class Midpoint : GH_Component
     {
 
-        public Midpoint() : base("Midpoint", "MP", "Evaluates the midpoint of a curve.", "Wombat", "Curve")
+        public Midpoint() : base("Midpoint", "MP", "Evaluates the midpoint of a curve's length.", "Wombat", "Curve")
         {
         }
 
@@ -35,8 +35,8 @@ namespace WombatGH
             Curve crv = default(Curve);
             if (!DA.GetData("Curve", ref crv)) return;
 
-            crv.Domain = new Interval(0, 1);
-            Point3d mp = crv.PointAt(0.5);
+            double midLength = (crv.GetLength() / 2);
+            Point3d mp = crv.PointAtLength(midLength);
 
             DA.SetData("Midpoint", mp);
         }
