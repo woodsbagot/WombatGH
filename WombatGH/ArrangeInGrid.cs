@@ -22,7 +22,7 @@ namespace WombatGH
 
         protected override void RegisterInputParams(GH_InputParamManager pManager)
         {
-            pManager.AddGenericParameter("Geometry", "G", "Geometry to arrange", GH_ParamAccess.list);
+            pManager.AddGeometryParameter("Geometry", "G", "Geometry to arrange", GH_ParamAccess.list);
             pManager.AddIntegerParameter("Items in Row", "I", "How many items to include in each row",
                 GH_ParamAccess.item, 10);
             pManager.AddNumberParameter("Spacing", "S", "The minimum spacing between items", GH_ParamAccess.item, 2.0);
@@ -38,63 +38,53 @@ namespace WombatGH
 
         protected override void SolveInstance(IGH_DataAccess DA)
         {
-            List<GeometryBase> castGeo = new List<GeometryBase>();
-            List<GH_ObjectWrapper> geoToTransform = new List<GH_ObjectWrapper>();
+            List<IGH_GeometricGoo> geoRaw = new List<IGH_GeometricGoo>();
             int rowCount = -1;
             double spacing = 2.0;
-            
-            if (!DA.GetDataList("Geometry", geoToTransform)) return;
+            if (!DA.GetDataList("Geometry", geoRaw)) return;
             if (!DA.GetData("Items in Row", ref rowCount)) return;
             if (!DA.GetData("Spacing", ref spacing)) return;
 
-            List<GeometryBase> transformedGeo = new List<GeometryBase>();
+            List<IGH_GeometricGoo> transformedGeo = new List<IGH_GeometricGoo>();
             List<Transform> xforms = new List<Transform>();
-
-            geoToTransform.ForEach(item =>
-            {
-                AddRuntimeMessage(GH_RuntimeMessageLevel.Warning, item.Value.GetType().ToString());
-                if (GH_Convert.ToGeometryBase(item.Value) == null)
-                {
-                    AddRuntimeMessage(GH_RuntimeMessageLevel.Warning, item.Value.GetType().ToString() + "not supported. Contact Woods Bagot DT to add support");
-                }
-                else
-                {
-                    castGeo.Add(GH_Convert.ToGeometryBase(item.Value));
-                }
-            });
 
             double x = 0;
             double y = 0;
-            int i = 0;
-            double maxY = 0;
 
-            castGeo.ForEach(geo =>
+            var geoToTransform = geoRaw.Where(g => g != null).ToList();
+            geoToTransform.Reverse();
+
+            while (geoToTransform.Count > 0)
             {
-                if (i == rowCount)
+                double maxY = 0;
+                x = 0;
+                for (int i = 0; i < rowCount; i++) // for each item in the row 
                 {
-                    x = 0;
-                    i = 0;
-                    y += maxY + spacing;
+                    //if (geoToTransform.Count < i + 1) continue;
+                    //pop
+                    if (geoToTransform.Count == 0) break;
+                    var thisGeo = geoToTransform[0].DuplicateGeometry();
+                    geoToTransform.RemoveAt(0);
+
+                    var bbox = thisGeo.Boundingbox;
+                    var width = bbox.Diagonal.X;
+                    var height = bbox.Diagonal.Y;
+                    var lowerLeft = bbox.Min;
+
+                    var currPoint = new Point3d(x, y, 0);
+
+                    var transform = Transform.Translation(currPoint - lowerLeft);
+
+                    thisGeo.Transform(transform);
+                    transformedGeo.Insert(0, thisGeo);
+                    xforms.Add(transform);
+                    x += width + spacing;
+                    if (maxY < height) maxY = height; //for a given row, keep bumping the max row height
                 }
-                i++;
-
-                var bbox = geo.GetBoundingBox(false);
-                var width = bbox.Diagonal.X;
-                var height = bbox.Diagonal.Y;
-                var lowerLeft = bbox.Min;
-
-                var currPoint = new Point3d(x, y, 0);
-
-                var transform = Transform.Translation(currPoint - lowerLeft);
-
-                geo.Transform(transform);
-                transformedGeo.Insert(0, geo);
-                xforms.Add(transform);
-                x += width + spacing;
-                if (maxY < height) maxY = height;
-               
-
-            });
+                y += maxY + spacing;
+            }
+            transformedGeo.Reverse();
+            xforms.Reverse();
 
             DA.SetDataList("Transformed Geometry", transformedGeo);
             DA.SetDataList("Transforms", xforms);
