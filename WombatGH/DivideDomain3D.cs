@@ -46,8 +46,8 @@ namespace WombatGH
             int cntV = 10;
             int cntW = 10;
             DA.GetData("U Domain", ref intU);
-            DA.GetData("V Domain", ref intU);
-            DA.GetData("W Domain", ref intU);
+            DA.GetData("V Domain", ref intV);
+            DA.GetData("W Domain", ref intW);
             DA.GetData("U Count", ref cntU);
             DA.GetData("V Count", ref cntV);
             DA.GetData("W Count", ref cntW);
@@ -56,21 +56,26 @@ namespace WombatGH
             List<Interval> domListV = new List<Interval>();
             List<Interval> domListW = new List<Interval>();
 
+
             for (int i = 0; i < cntU; i++)
             {
                 Interval subIntU = GetSubInterval(intU, cntU, i);
-                for (int j = 0; j < cntV; j++)
-                {
-                    Interval subIntV = GetSubInterval(intV, cntV, j);
-                    for (int k = 0; k < cntW; k++)
-                    {
-                        Interval subIntW = GetSubInterval(intW, cntW, k);
-                        domListU.Add(new Interval(subIntU));
-                        domListV.Add(new Interval(subIntV));
-                        domListW.Add(new Interval(subIntW));
-                    }
-                }
+                domListU.Add(new Interval(subIntU));
             }
+
+            for (int i = 0; i < cntV; i++)
+            {
+                Interval subIntV = GetSubInterval(intV, cntV, i);
+                domListV.Add(new Interval(subIntV));
+            }
+
+            for (int i = 0; i < cntW; i++)
+            {
+                Interval subIntW = GetSubInterval(intW, cntW, i);
+                domListW.Add(new Interval(subIntW));
+            }
+
+
 
             DA.SetDataList("U Segments as list", domListU);
             DA.SetDataList("V Segments as list", domListV);
