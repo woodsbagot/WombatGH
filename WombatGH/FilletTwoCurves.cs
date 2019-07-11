@@ -7,8 +7,6 @@ using Rhino;
 using Rhino.Input;
 using Rhino.DocObjects;
 using Rhino.Input.Custom;
-
-
 using System.Drawing;
 using WombatGH.Properties;
 
@@ -44,6 +42,7 @@ namespace WombatGH
 
         protected override void SolveInstance(IGH_DataAccess DA)
         {
+            
             List<Curve> crv1 = new List<Curve>();
             List<Curve> crv2 = new List<Curve>();
             double radius = 0;
@@ -64,38 +63,58 @@ namespace WombatGH
             List<Curve> crv2Output = new List<Curve>();
             List<Curve> filletOutput = new List<Curve>();
 
-            if (crv2.Count != crv1.Count)
+            int listLength;
+            if(crv1.Count == crv2.Count)
             {
-                AddRuntimeMessage(GH_RuntimeMessageLevel.Error, "The number of geometry in Curve list 1 and Curve list 2 are unequal.");
-                return;
+                listLength = crv1.Count;
             }
-
-            for (int i = 0; i < crv1.Count; i++)
+            else
             {
-                if (crv1 != null && crv2 != null)
+                listLength = Math.Max(crv1.Count, crv2.Count);
+            }
+            int crv1Iter, crv2Iter;
+
+            for (int i = 0; i < listLength; i++)
+            {
+                if (i > crv1.Count-1)
                 {
-                    var crvEndPt1 = crv1[i].PointAt(0);
-                    var crvEndPt2 = crv2[i].PointAt(0);
-                    Curve[] filletCurves = Curve.CreateFilletCurves(crv1[i], crvEndPt1, crv2[i], crvEndPt2, radius, join, trim, arcExtension, tol, angelTol);
+                    crv1Iter = Math.Max (crv1.Count-1,0 );
+                }
+                else
+                {
+                    crv1Iter = i;
+                }
+
+                if (i > crv2.Count-1)
+                {
+                    crv2Iter = Math.Max(crv2.Count - 1, 0);
+                }
+                else
+                {
+                    crv2Iter = i;
+                }
+
+                if ((crv1.Count != 0 ) && (crv2.Count != 0) && crv1[crv1Iter] != null && crv2[crv2Iter] != null)
+                {
+                    var crvEndPt1 = crv1[crv1Iter].PointAt(0);
+                    var crvEndPt2 = crv2[crv2Iter].PointAt(0);
+                    Curve[] filletCurves = Curve.CreateFilletCurves(crv1[crv1Iter], crvEndPt1, crv2[crv2Iter], crvEndPt2, radius, join, trim, arcExtension, tol, angelTol);
 
                     if (filletCurves.Length == 0 )
                     {
                         if (arcExtension == false)
                         {
                             AddRuntimeMessage(GH_RuntimeMessageLevel.Warning, "Unable to extend curve2 to curve1. No filleted geometry produced.");
-                            return;
                         }
                         else if (arcExtension == true)
                         {
-                            if (Curve.CreateFilletCurves(crv1[i], crvEndPt1, crv2[i], crvEndPt2, radius, join, trim, false, tol, angelTol).Length == 0)
+                            if (Curve.CreateFilletCurves(crv1[crv1Iter], crvEndPt1, crv2[crv2Iter], crvEndPt2, radius, join, trim, false, tol, angelTol).Length == 0)
                             {
                                 AddRuntimeMessage(GH_RuntimeMessageLevel.Warning, "Unable to extend curve2 to curve1. No filleted geometry produced.");
-                                return;
                             }
                             else
                             {
                                 AddRuntimeMessage(GH_RuntimeMessageLevel.Warning, "Unable to create arc extension. No filleted geometry produced");
-                                return;
                             }
                         }
                     }
