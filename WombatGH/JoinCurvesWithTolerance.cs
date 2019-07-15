@@ -25,6 +25,7 @@ namespace WombatGH
         {
             pManager.AddCurveParameter("Curves", "C", "Curves to join.", GH_ParamAccess.list);
             pManager.AddNumberParameter("Tolerance", "T", "Dimensional tolerance for join.", GH_ParamAccess.item);
+            pManager.AddIntegerParameter("Option", "O", "Joining Option: 0 = Blend, 1 = Extend", GH_ParamAccess.item,0);
         }
 
         protected override void RegisterOutputParams(GH_OutputParamManager pManager)
@@ -36,13 +37,49 @@ namespace WombatGH
         {
             List<Curve> crvs = new List<Curve>();
             double tol = Rhino.RhinoDoc.ActiveDoc.ModelAbsoluteTolerance;
+            double angelTol = Rhino.RhinoDoc.ActiveDoc.ModelAngleToleranceDegrees;
+            int option = 0;
 
             if (!DA.GetDataList("Curves", crvs)) return;
-            if (!DA.GetData("Tolerance", ref tol)) return;
+            DA.GetData("Tolerance", ref tol);
+            if (!DA.GetData("Option", ref option)) return;
 
-            Curve[] crvsJ = Curve.JoinCurves(crvs, tol);
-
-            DA.SetDataList("Curve", crvsJ);
+            if (option == 0)
+            {
+                Curve[] crvsJ = Curve.JoinCurves(crvs, tol);
+                DA.SetDataList("Curve", crvsJ);
+            }else if(option == 1)
+            {
+                List<Curve> filletOutput = new List<Curve>();
+                Curve[] filletSegment = new Curve[0];
+                for (int i = 0; i < crvs.Count ; i++)
+                {
+                    if (i != crvs.Count -1 )
+                    {
+                        if (crvs[i] != null && crvs[i + 1] != null)
+                        {
+                            if (filletOutput.Count == 0 || filletSegment.Count() == 0)
+                            {
+                                filletSegment = Curve.CreateFilletCurves(crvs[i], crvs[i].PointAt(0.5), crvs[i + 1], crvs[i + 1].PointAt(0.5), 0, false, true, false, Rhino.RhinoDoc.ActiveDoc.ModelAbsoluteTolerance, angelTol);
+                            }else 
+                            {
+                                filletSegment = Curve.CreateFilletCurves(filletOutput[filletOutput.Count - 1], filletOutput[filletOutput.Count - 1].PointAtEnd, crvs[i + 1], crvs[i + 1].PointAtEnd, 0, false, true, false, Rhino.RhinoDoc.ActiveDoc.ModelAbsoluteTolerance, angelTol);
+                            }
+                            if (filletSegment.Count() == 0)
+                            {
+                                int j = i + 1;
+                                AddRuntimeMessage(GH_RuntimeMessageLevel.Warning, "No filleted geometry produced between curve " + i.ToString() + " and curve " + j.ToString() + ".");
+                            }
+                            else
+                            {
+                                filletOutput.Add(filletSegment[0]);
+                                filletOutput.Add(filletSegment[1]);
+                            }
+                        }
+                    }
+                }
+                DA.SetDataList("Curve", filletOutput);
+            }
         }
     }
 }
