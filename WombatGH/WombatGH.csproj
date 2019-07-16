@@ -90,6 +90,7 @@
     <Compile Include="ExtendSurface.cs" />
     <Compile Include="LaunchURL.cs" />
     <Compile Include="FeatureRequest.cs" />
+    <Compile Include="FilletTwoCurves.cs" />
     <Compile Include="NaNObject.cs" />
     <Compile Include="CopyMoveRenameFile.cs" />
     <Compile Include="CurveCurveCP.cs" />
@@ -346,6 +347,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WombatGH_CloseCurve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WombatGH_FilletTwoCurves.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
