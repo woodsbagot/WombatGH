@@ -80,6 +80,16 @@ namespace WombatGH
 
             double unitMultiplier = displayFt ? 12 : 1;
 
+            // Deal with negative numbers
+            bool negative = false;
+            if (val < 0)
+            {
+                // If the input value is negative > take the absolute value
+                val = Math.Abs(val);
+                // And store info that it was a negative number
+                negative = true;
+            }
+
             try
             {
                 double inchVal = val * unitMultiplier;
@@ -112,7 +122,7 @@ namespace WombatGH
                             formatResult = $"{ft}'";
                         }
                         else
-                        { 
+                        {
                             formatResult = $"{ft}' - {inches}\"";
                         }
                     }
@@ -133,6 +143,12 @@ namespace WombatGH
                         GCD = 1;
                     }
                     formatResult = $"{ft}' - {inches} {fracNum / GCD}/{fracDenom / GCD}\"";
+                }
+
+                // Make number negative if it was negative to begin with
+                if (negative)
+                {
+                    formatResult = "-" + formatResult;
                 }
                 DA.SetData("Formatted Value", formatResult);
             }
