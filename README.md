@@ -29,7 +29,7 @@ git push origin master
 
 ## Contributors ##
 
-These tools were initially built by [Andrew Heumann](https://github.com/AndrewHeumann) and [Brian Ringley](https://github.com/bringley) on behalf of the [Woods Bagot](http://www.woodsbagot.com) Design Technology team. They are currently maintained by [Matthew Swaidan](https://github.com/mswaidan).
+These tools were initially built by [Andrew Heumann](https://github.com/AndrewHeumann) and [Brian Ringley](https://github.com/bringley) on behalf of the [Woods Bagot](http://www.woodsbagot.com) Design Technology team. Previously maintained by [Matthew Swaidan](https://github.com/mswaidan). They are currently maintained by [Andrea Tassera](https://github.com/Dre-Tas).
 
 A big thank you to all the Woods Bagot project staff whose requests and testing made these tools possible!
 	
