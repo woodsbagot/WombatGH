@@ -60,7 +60,8 @@ namespace WombatGH
             string remains = String.Join("", ftParts, 1, ftParts.Length - 1);
             double ft;
             Double.TryParse(ftPart, out ft);
-
+            bool isNegative = false;
+            if (ft < 0)  isNegative = true;
             splitchars = "- \"";
 
             string[] inchParts = remains.Split(splitchars.ToCharArray());
@@ -98,9 +99,9 @@ namespace WombatGH
                 //Print(String.Format("inchVal = {0}", inchVal));
             }
             //Print(String.Format("inchVal/12 = {0}", inchVal / 12.0));
-
-            double feet = ft + inchVal / 12.0;
-            double inches = ft * 12 + inchVal;
+            
+            double feet = isNegative ? ft - inchVal / 12.0 : ft + inchVal / 12.0;
+            double inches = isNegative ? ft * 12 - inchVal : ft * 12 + inchVal;
 
             DA.SetData("Value in Feet", feet);
             DA.SetData("Value in Inches", inches);
